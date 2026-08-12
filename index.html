@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fragancias JR</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+  :root{
+    --wine:#13294b;
+    --wine-deep:#0a1830;
+    --blush:#f2e2df;
+    --gold-soft:#e4cfa0;
+    --ink:#1c1210;
+    --paper:#faf6f2;
+    --line:#e9ded5;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+  }
+
+  .hero{
+    text-align:center;
+    padding:4.5rem 1.5rem 3rem;
+    background:linear-gradient(160deg, var(--wine-deep), var(--wine) 65%, #4a1220);
+    color:var(--blush);
+  }
+  .hero .eyebrow{
+    letter-spacing:.4em; font-size:.65rem; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:1.2rem;
+  }
+  .hero h1{
+    font-family:'Cormorant Garamond',serif; font-weight:600;
+    font-size:clamp(2.2rem,6vw,3.4rem); margin:0 0 .6rem;
+  }
+  .hero p{ max-width:32rem; margin:0 auto; font-size:.92rem; line-height:1.7; color:rgba(242,226,223,.82);}
+
+  .toolbar{
+    position:sticky; top:0; z-index:10;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:1.2rem 1.5rem;
+    display:flex; flex-wrap:wrap; gap:.8rem;
+    align-items:center; justify-content:center;
+  }
+  .search-wrap{ position:relative; width:min(460px, 90vw); }
+  .search-wrap input{
+    width:100%; padding:.75rem 1rem .75rem 2.4rem;
+    border:1px solid #d9c9bd; border-radius:999px;
+    font-family:'Jost',sans-serif; font-size:.9rem;
+    background:#fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23a08e83" stroke-width="2"><circle cx="6.5" cy="6.5" r="5"/><line x1="10.5" y1="10.5" x2="15" y2="15"/></svg>') no-repeat .9rem center;
+    outline:none;
+  }
+  .search-wrap input:focus{ border-color:var(--wine); }
+
+  .result-count{
+    text-align:center; font-size:.75rem; letter-spacing:.08em;
+    text-transform:uppercase; color:#a08e83; padding:1.2rem 0 0;
+  }
+
+  .grid{
+    max-width:1300px; margin:0 auto;
+    padding:1.6rem 1.5rem 3rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+    gap:1.2rem;
+  }
+  .card{
+    background:#fff; border:1px solid var(--line);
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+  .card .imgwrap{
+    aspect-ratio:1/1; background:#f1e9e3;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .card .imgwrap img{ width:100%; height:100%; object-fit:cover; mix-blend-mode:multiply; }
+  .card .fallback{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    color:#c3ada2; font-size:.78rem; text-align:center; padding:1rem;
+  }
+  .card .body{ padding:.7rem .85rem .9rem; }
+  .card .name{ font-size:.8rem; line-height:1.35; color:var(--ink); }
+
+  .empty, .loading{
+    text-align:center; padding:3rem 1.5rem; color:#a08e83; font-size:.9rem;
+  }
+  .empty{ display:none; }
+
+  .load-more{
+    display:block; margin:0 auto 3rem; padding:.8rem 2.2rem;
+    background:var(--wine); color:#fff; border:none; border-radius:999px;
+    font-family:'Jost',sans-serif; font-size:.8rem; letter-spacing:.1em;
+    text-transform:uppercase; cursor:pointer;
+  }
+  .load-more:hover{ opacity:.9; }
+
+  footer{
+    text-align:center; padding:1rem 1.5rem 3.5rem;
+    font-size:.75rem; color:#a08e83;
+  }
+
+  @media (max-width:520px){
+    .hero{ padding:3.2rem 1.2rem 2.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="eyebrow">Catálogo privado</div>
+  <h1>Fragancias JR</h1>
+  <p>Busca por nombre. Se actualiza solo cada semana.</p>
+</section>
+
+<div class="toolbar">
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Buscar por nombre…" autocomplete="off" disabled>
+  </div>
+</div>
+
+<div class="result-count" id="result-count"></div>
+<div class="loading" id="loading">Cargando catálogo…</div>
+
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty">No se encontraron fragancias con ese criterio.</div>
+<button class="load-more" id="load-more" style="display:none;">Ver más</button>
+
+<footer id="footer"></footer>
+
+<script>
+const IMG_BASE = "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/";
+const PAGE_SIZE = 60;
+let shown = PAGE_SIZE;
+let PRODUCTS = [];
+let currentList = [];
+
+function imgUrl(filename){
+  const folder = filename.slice(0,1) + "/" + filename.slice(1,2) + "/";
+  return IMG_BASE + folder + filename;
+}
+function filenameFromUrl(url){
+  return url ? url.split("/").pop() : "";
+}
+function normalize(s){
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+}
+
+function renderPage(){
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  const loadMore = document.getElementById("load-more");
+  document.getElementById("result-count").textContent = currentList.length + " fragancia" + (currentList.length===1?"":"s");
+
+  if(currentList.length === 0){
+    grid.innerHTML = "";
+    empty.style.display = "block";
+    loadMore.style.display = "none";
+    return;
+  }
+  empty.style.display = "none";
+
+  const slice = currentList.slice(0, shown);
+  grid.innerHTML = slice.map(p => {
+    const filename = filenameFromUrl(p.img);
+    const src = filename ? imgUrl(filename) : "";
+    return `
+      <div class="card">
+        <div class="imgwrap">
+          ${src
+            ? `<img src="${src}" alt="${p.nombre}" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'fallback\\'>${p.nombre}</div>';">`
+            : `<div class="fallback">${p.nombre}</div>`
+          }
+        </div>
+        <div class="body"><div class="name">${p.nombre}</div></div>
+      </div>
+    `;
+  }).join("");
+
+  loadMore.style.display = shown < currentList.length ? "block" : "none";
+}
+
+function applyFilters(){
+  const q = normalize(document.getElementById("search").value.trim());
+  currentList = !q ? PRODUCTS : PRODUCTS.filter(p => normalize(p.nombre).includes(q));
+  shown = PAGE_SIZE;
+  renderPage();
+}
+
+async function init(){
+  try{
+    const res = await fetch("products.json?_=" + Date.now());
+    PRODUCTS = await res.json();
+    currentList = PRODUCTS;
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("search").disabled = false;
+    document.getElementById("footer").textContent =
+      "Catálogo privado — " + PRODUCTS.length + " fragancias — actualizado automáticamente cada semana.";
+    renderPage();
+  }catch(err){
+    document.getElementById("loading").textContent = "No se pudo cargar el catálogo. Intenta recargar la página.";
+  }
+}
+
+document.getElementById("search").addEventListener("input", applyFilters);
+document.getElementById("load-more").addEventListener("click", () => {
+  shown += PAGE_SIZE;
+  renderPage();
+});
+
+init();
+</script>
+
+</body>
+</html>
