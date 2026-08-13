@@ -1,15 +1,4 @@
-
-   
-  const $ = cheerio.load(html); let nombre = (nameEl.text() || linkEl.text() || '').trim();
-    if (nombre.endsWith('.')) nombre = nombre.slice(0, -1).trim();
-    const url = linkEl.attr('href') || '';
-    let img = imgEl.attr('src') || imgEl.attr('data-src') || imgEl.attr('data-original') || '';
-
-    if (!nombre || !url) return;
-    if (img.startsWith('data:') || img.includes('loader')) img = '';
-
-    // Precio: tomamos el más bajo de todos los ".price" encontrados
-    // (si hay precio rebajado, el rebajado siempre es menor que el tachado)import * as cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import fs from 'fs';
 
 const BASE = 'https://amoramarket.com.mx/fragancias.html';
@@ -21,6 +10,7 @@ async function scrapePage(p) {
   });
   if (!res.ok) return null;
   const html = await res.text();
+  const $ = cheerio.load(html);
   const items = [];
 
   $('.product-item, li.item.product').each((_, el) => {
@@ -29,8 +19,18 @@ async function scrapePage(p) {
     const nameEl = $el.find('.product-item-link, .product-item-name').first();
     const imgEl = $el.find('img').first();
 
-    let precio = null;    $el.find('.price').each((_, priceEl) => {
+    let nombre = (nameEl.text() || linkEl.text() || '').trim();
+    if (nombre.endsWith('.')) nombre = nombre.slice(0, -1).trim();
+    const url = linkEl.attr('href') || '';
+    let img = imgEl.attr('src') || imgEl.attr('data-src') || imgEl.attr('data-original') || '';
 
+    if (!nombre || !url) return;
+    if (img.startsWith('data:') || img.includes('loader')) img = '';
+
+    // Precio: tomamos el más bajo de todos los ".price" encontrados
+    // (si hay precio rebajado, el rebajado siempre es menor que el tachado)
+    let precio = null;
+    $el.find('.price').each((_, priceEl) => {
       const txt = $(priceEl).text();
       const num = parseFloat(txt.replace(/[^0-9.]/g, ''));
       if (!isNaN(num) && num > 0 && (precio === null || num < precio)) {
