@@ -85,7 +85,11 @@
     color:#c3ada2; font-size:.78rem; text-align:center; padding:1rem;
   }
   .card .body{ padding:.7rem .85rem .9rem; }
-  .card .name{ font-size:.8rem; line-height:1.35; color:var(--ink); }
+  .card .name{ font-size:.8rem; line-height:1.35; color:var(--ink); min-height:2.2em; }
+  .card .price{
+    font-family:'Cormorant Garamond',serif; font-weight:600;
+    font-size:1.15rem; color:var(--wine); margin-top:.35rem;
+  }
 
   .empty, .loading{
     text-align:center; padding:3rem 1.5rem; color:#a08e83; font-size:.9rem;
@@ -147,6 +151,9 @@ function imgUrl(filename){
 function filenameFromUrl(url){
   return url ? url.split("/").pop() : "";
 }
+function money(n){
+  return "$" + n.toLocaleString("es-MX", {minimumFractionDigits:0, maximumFractionDigits:0});
+}
 function normalize(s){
   return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
 }
@@ -177,7 +184,10 @@ function renderPage(){
             : `<div class="fallback">${p.nombre}</div>`
           }
         </div>
-        <div class="body"><div class="name">${p.nombre}</div></div>
+        <div class="body">
+          <div class="name">${p.nombre}</div>
+          ${p.precio_venta ? `<div class="price">${money(p.precio_venta)}</div>` : ""}
+        </div>
       </div>
     `;
   }).join("");
