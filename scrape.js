@@ -45,6 +45,7 @@ async function scrapePage(p) {
 }
 
 // Margen escalonado: más % en fragancias baratas, menos en las caras
+// + $120 de envío si el producto no alcanza el mínimo de envío gratis de Amora ($1,300)
 function calcularPrecioVenta(precioAmora){
   if (precioAmora == null) return null;
   let margen;
@@ -54,7 +55,10 @@ function calcularPrecioVenta(precioAmora){
   else if (precioAmora < 4000) margen = 0.20;
   else margen = 0.15;
 
-  const conMargen = precioAmora * (1 + margen);
+  let conMargen = precioAmora * (1 + margen);
+  if (precioAmora < 1300) {
+    conMargen += 120;
+  }
   return Math.ceil(conMargen / 10) * 10; // redondea hacia arriba al $10
 }
 
