@@ -26,6 +26,7 @@ async function scrapePage(p) {
 
     if (!nombre || !url) return;
     if (img.startsWith('data:') || img.includes('loader')) img = '';
+    if (/^tester\b/i.test(nombre)) return; // excluye testers (traen marca de agua de Amora en la foto)
 
     // Precio: tomamos el más bajo de todos los ".price" encontrados
     // (si hay precio rebajado, el rebajado siempre es menor que el tachado)
