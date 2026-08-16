@@ -1,8 +1,10 @@
 name: Actualizar catálogo
 
 on:
-  schedule:
-    - cron: '0 13 * * 1'
+  # Desactivado temporalmente: el scraper automático estaba perdiendo productos.
+  # Se puede reactivar el cron descomentando la línea de abajo una vez verificado.
+  # schedule:
+  #   - cron: '0 13 * * 1'
   workflow_dispatch: {}
 
 permissions:
