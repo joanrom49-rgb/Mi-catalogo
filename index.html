@@ -52,6 +52,12 @@
     text-transform:uppercase;
     color:var(--gold-soft);
   }
+  .hero .min-order{
+    margin-top:.7rem;
+    font-size:.68rem;
+    letter-spacing:.08em;
+    color:rgba(242,226,223,.65);
+  }
 
   .toolbar{
     position:sticky; top:0; z-index:10;
@@ -88,8 +94,17 @@
     display:flex; flex-direction:column; overflow:hidden;
   }
   .card .imgwrap{
+    position:relative;
     aspect-ratio:1/1; background:#f1e9e3;
     display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .card .imgwrap::after{
+    content:"";
+    position:absolute;
+    top:0; right:0;
+    width:42%; height:42%;
+    background: radial-gradient(circle at 100% 0%, #f1e9e3 60%, rgba(241,233,227,0) 78%);
+    pointer-events:none;
   }
   .card .imgwrap img{ width:100%; height:100%; object-fit:cover; mix-blend-mode:multiply; }
   .card .fallback{
@@ -133,6 +148,7 @@
   <h1>Romero's Parfums & Fragrances</h1>
   <p>Busca por nombre. Se actualiza solo cada semana.</p>
   <span class="badge">Producto 100% original</span>
+  <div class="min-order">Compra mínima $500</div>
 </section>
 
 <div class="toolbar">
