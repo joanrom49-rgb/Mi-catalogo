@@ -1,13 +1,13 @@
 [
   {
     "nombre": "212 100 Ml Edt Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/024160_1_3.jpg",
-    "precio_venta": 1780
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/023160_1_3.jpg",
+    "precio_venta": 2020
   },
   {
     "nombre": "212 100 Ml Edt Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/023160_1_3.jpg",
-    "precio_venta": 2020
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/024160_1_3.jpg",
+    "precio_venta": 1740
   },
   {
     "nombre": "212 200 Ml Edt Spray",
@@ -148,11 +148,6 @@
     "nombre": "360º Red 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/3/13253176_1_3.jpg",
     "precio_venta": 700
-  },
-  {
-    "nombre": "360º Red 100 Ml Edt Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/2/12252877_1_3.jpg",
-    "precio_venta": 680
   },
   {
     "nombre": "360º White 100 Ml Edt Spray",
@@ -340,9 +335,9 @@
     "precio_venta": 1980
   },
   {
-    "nombre": "Acqua Di Gio Profondo Parfum 100Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/l/e/le309800_1.jpg",
-    "precio_venta": 2620
+    "nombre": "ACQUA DI GIO PROFONDO PARFUM 200ML",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/l/e/le309600_2.jpg",
+    "precio_venta": 3480
   },
   {
     "nombre": "Acqua Di Gio Refillable 200Ml Edt Spray",
@@ -362,22 +357,22 @@
   {
     "nombre": "Acqua Di Parma Ambra 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81071_1_2.jpg",
-    "precio_venta": 3290
+    "precio_venta": 3110
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Arancia di Capri 100 ml EDT Unisex",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081660_2.jpg",
-    "precio_venta": 2090
+    "precio_venta": 1980
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Bergamotto Di Calabria 180Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081663_1.jpg",
-    "precio_venta": 2640
+    "precio_venta": 2500
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Fico Di Amalfi 100Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081664_1.jpg",
-    "precio_venta": 2090
+    "precio_venta": 1970
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Fico Di Amalfi 180Ml Edt Spray",
@@ -387,137 +382,142 @@
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Mandarino Di Sicilia 100Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081630_1.jpg",
-    "precio_venta": 1890
+    "precio_venta": 1780
+  },
+  {
+    "nombre": "Acqua Di Parma Blu Mediterraneo Mandarino Di Sicilia 180Ml Edt Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081631_1.jpg",
+    "precio_venta": 3040
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Mandorlo Di Sicilia 180Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081669_1.jpg",
-    "precio_venta": 2480
+    "precio_venta": 2340
   },
   {
     "nombre": "Acqua Di Parma Blu Mediterraneo Mirto Di Panarea 100Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081666_1.jpg",
-    "precio_venta": 2090
+    "precio_venta": 1980
   },
   {
     "nombre": "Acqua Di Parma Camelia 100ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81021_2.jpg",
-    "precio_venta": 2800
+    "precio_venta": 2640
   },
   {
     "nombre": "Acqua Di Parma Camelia 180ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81022_2.jpg",
-    "precio_venta": 3170
+    "precio_venta": 2950
   },
   {
     "nombre": "Acqua Di Parma Club 100Ml Edc Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adpo82821_1.jpg",
-    "precio_venta": 2120
+    "precio_venta": 1960
   },
   {
     "nombre": "Acqua Di Parma Club 180Ml Edc Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adpo82822_1.jpg",
-    "precio_venta": 2640
+    "precio_venta": 2500
   },
   {
     "nombre": "Acqua Di Parma Colonia 100Ml Edc Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp082806_1.jpg",
-    "precio_venta": 2120
+    "precio_venta": 1960
   },
   {
     "nombre": "Acqua Di Parma Colonia Il Profumo 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp082498_1.jpg",
-    "precio_venta": 2850
+    "precio_venta": 2640
   },
   {
     "nombre": "Acqua Di Parma Colonia Intensa 100Ml Edc Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp082810_1.jpg",
-    "precio_venta": 1900
+    "precio_venta": 1770
   },
   {
     "nombre": "Acqua Di Parma Crystal Incense 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp082777_1.jpg",
-    "precio_venta": 3290
+    "precio_venta": 3110
   },
   {
     "nombre": "Acqua Di Parma Essenza 180Ml Edc Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adpo82818_1.jpg",
-    "precio_venta": 2640
+    "precio_venta": 2500
   },
   {
     "nombre": "Acqua Di Parma Leather 180ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81062_2.jpg",
-    "precio_venta": 3960
+    "precio_venta": 3750
   },
   {
     "nombre": "Acqua Di Parma Luce Di Rosa 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081920_1.jpg",
-    "precio_venta": 3290
+    "precio_venta": 3110
   },
   {
     "nombre": "Acqua Di Parma Magnolia Infinita 180Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081334_1.jpg",
-    "precio_venta": 4240
+    "precio_venta": 4000
   },
   {
     "nombre": "Acqua Di Parma Osmanthus 100ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81001_2.jpg",
-    "precio_venta": 2970
+    "precio_venta": 2800
   },
   {
     "nombre": "Acqua Di Parma Osmanthus 180ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81002_2.jpg",
-    "precio_venta": 3820
+    "precio_venta": 3600
   },
   {
     "nombre": "Acqua Di Parma Oud 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81051_1_2.jpg",
-    "precio_venta": 3290
+    "precio_venta": 3110
   },
   {
     "nombre": "Acqua Di Parma Oud 180 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81052_1.jpg",
-    "precio_venta": 4240
+    "precio_venta": 4000
   },
   {
     "nombre": "Acqua Di Parma Peonia 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/3/13400_1.jpg",
-    "precio_venta": 3520
+    "precio_venta": 3330
   },
   {
     "nombre": "Acqua Di Parma Quercia 180 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81082_1_2.jpg",
-    "precio_venta": 3820
+    "precio_venta": 3600
   },
   {
     "nombre": "Acqua Di Parma Rosa Nobile 100 Ml Edc Espray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/4/9/49002_5.jpg",
-    "precio_venta": 3520
+    "precio_venta": 3330
   },
   {
     "nombre": "Acqua Di Parma Sandalo 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81091_1_2.jpg",
-    "precio_venta": 2970
+    "precio_venta": 2800
   },
   {
     "nombre": "Acqua Di Parma Sandalo 180 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81092_1_2.jpg",
-    "precio_venta": 4240
+    "precio_venta": 4000
   },
   {
     "nombre": "Acqua Di Parma Yuzu 100ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81011_2.jpg",
-    "precio_venta": 2970
+    "precio_venta": 2800
   },
   {
     "nombre": "Acqua Di Parma Yuzu 180ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/1/81012_2.jpg",
-    "precio_venta": 3820
+    "precio_venta": 3600
   },
   {
     "nombre": "Acqua Di Parma Zafferano 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/d/adp081337_1.jpg",
-    "precio_venta": 2970
+    "precio_venta": 2800
   },
   {
     "nombre": "Acqua Essenziale 100 Ml Edt Spray",
@@ -648,11 +648,6 @@
     "nombre": "Afnan 9Am Dive 150Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/10759_1.jpg",
     "precio_venta": 920
-  },
-  {
-    "nombre": "Afnan 9Am Pour Femme 100Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/10725_1.jpg",
-    "precio_venta": 760
   },
   {
     "nombre": "Afnan 9Pm 100Ml Edp Spray",
@@ -882,7 +877,7 @@
   {
     "nombre": "Alien 90 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/2/8/280211_1_3.jpg",
-    "precio_venta": 1520
+    "precio_venta": 1480
   },
   {
     "nombre": "Alien Goddess 90Ml Edp Spray Rechargeable",
@@ -902,7 +897,7 @@
   {
     "nombre": "Amor Amor 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/3/0/306368_1_3.jpg",
-    "precio_venta": 870
+    "precio_venta": 860
   },
   {
     "nombre": "AMOR AMOR 100ML EDP SPRAY",
@@ -917,7 +912,7 @@
   {
     "nombre": "Amouage Guidance 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/1046_1.jpg",
-    "precio_venta": 5750
+    "precio_venta": 5470
   },
   {
     "nombre": "Amouage Lineage 100Ml Edp Spray",
@@ -927,12 +922,12 @@
   {
     "nombre": "Amouage Overture 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/10294_1.jpg",
-    "precio_venta": 5790
+    "precio_venta": 5640
   },
   {
     "nombre": "Amouage Reflection 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/1/1153_1.jpg",
-    "precio_venta": 5120
+    "precio_venta": 4830
   },
   {
     "nombre": "Amouage Reflection 45 100Ml Extracto De Perfume Spray",
@@ -942,7 +937,7 @@
   {
     "nombre": "Amouge Love Delight 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/4/1/41097_1.jpg",
-    "precio_venta": 5600
+    "precio_venta": 5330
   },
   {
     "nombre": "Anais Anais 100 Ml Edt Spray",
@@ -1037,7 +1032,7 @@
   {
     "nombre": "Ariana Grande 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/r/arglr15134_1_3.jpg",
-    "precio_venta": 1050
+    "precio_venta": 1020
   },
   {
     "nombre": "Ariana Grande Cloud 100ml Edp Spray",
@@ -1052,7 +1047,7 @@
   {
     "nombre": "Ariana Grande Cloud Body Mist 236 Ml",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/r/arg4lb182bm_1_2.jpg",
-    "precio_venta": 450
+    "precio_venta": 390
   },
   {
     "nombre": "Ariana Grande Cloud Pink 100Ml Edp Spray",
@@ -1087,7 +1082,7 @@
   {
     "nombre": "Ariana Grande Moonlight Body Mist 236 Ml",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/r/arg3lb182bm_1_2.jpg",
-    "precio_venta": 450
+    "precio_venta": 390
   },
   {
     "nombre": "Ariana Grande R.E.M. 100Ml Edp Spray",
@@ -1112,7 +1107,7 @@
   {
     "nombre": "Ariana Grande Thank U Next 236ml Body Mist",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/a/r/arg5lb202bm_2.jpg",
-    "precio_venta": 450
+    "precio_venta": 390
   },
   {
     "nombre": "Armaf Club De Nuit Bling Men 75Ml Edp Spray",
@@ -1255,6 +1250,11 @@
     "precio_venta": 950
   },
   {
+    "nombre": "Armaf Odyssey Limoni Fresh 100Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/8/18863_1.jpg",
+    "precio_venta": 590
+  },
+  {
     "nombre": "Armaf Odyssey Limoni Fresh Edition Men 200Ml Body Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/9/19980_1.jpg",
     "precio_venta": 320
@@ -1293,6 +1293,11 @@
     "nombre": "Armaf Odyssey Revolution Ultra Edition 100Ml Edp Sp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/0/80578_1.jpg",
     "precio_venta": 950
+  },
+  {
+    "nombre": "Armaf Odyssey Spectra Rainbow Edition 100Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/8/18865_1.jpg",
+    "precio_venta": 860
   },
   {
     "nombre": "Armaf Odyssey Spectra Rainbow Edition Men 200Ml Body Spray",
@@ -1412,12 +1417,12 @@
   {
     "nombre": "Atelier Des Ors Lune Feline 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/e/d/edpb100003_1.jpg",
-    "precio_venta": 4050
+    "precio_venta": 4250
   },
   {
     "nombre": "Atelier Des Ors Pink Me Up 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/e/d/edpf100024_1.jpg",
-    "precio_venta": 4050
+    "precio_venta": 4250
   },
   {
     "nombre": "Atkinsons 41 Burlington Arcade 100Ml Edp Spray",
@@ -1482,7 +1487,7 @@
   {
     "nombre": "Azzaro The Most Wanted Intense 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/e/1e7ld11600_1.jpg",
-    "precio_venta": 1350
+    "precio_venta": 1390
   },
   {
     "nombre": "Azzaro The Most Wanted Intense 100Ml Edt Spray",
@@ -1536,12 +1541,12 @@
   },
   {
     "nombre": "Bad Boy Extreme 100Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65206733_1.jpg",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65187305_1.jpg",
     "precio_venta": 2190
   },
   {
     "nombre": "Bad Boy Extreme 100Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65187305_1.jpg",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65206733_1.jpg",
     "precio_venta": 2190
   },
   {
@@ -2067,7 +2072,7 @@
   {
     "nombre": "Blue Jeans 75 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/2/6/26075_1_3.jpg",
-    "precio_venta": 640
+    "precio_venta": 670
   },
   {
     "nombre": "Blue Seduction 2PZS 100ML EDT Spray/ Desodorante 150ML Spray",
@@ -2197,7 +2202,7 @@
   {
     "nombre": "Bright Crystal Absolu 90 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/5/1/511032_1_4.jpg",
-    "precio_venta": 1680
+    "precio_venta": 1560
   },
   {
     "nombre": "Brilliant White Diamonds 100 Ml Edt Spray",
@@ -2247,7 +2252,7 @@
   {
     "nombre": "Bvlgari Omnia Coral 100Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/i/0/i0093827_1.jpg",
-    "precio_venta": 2320
+    "precio_venta": 2250
   },
   {
     "nombre": "Bvlgari Omnia Crystalline 100Ml Edp Spray",
@@ -2647,7 +2652,7 @@
   {
     "nombre": "Coach Man 100ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/c/c/cc003a01_2.jpg",
-    "precio_venta": 1430
+    "precio_venta": 1350
   },
   {
     "nombre": "Coach Man Blue 100ml Edt Spray",
@@ -3217,7 +3222,7 @@
   {
     "nombre": "Dolce & Gabbana 125Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/3/130207750000_2.jpg",
-    "precio_venta": 1340
+    "precio_venta": 1310
   },
   {
     "nombre": "Dolce & Gabbana Blue Jasmine 75Ml Edp Spray",
@@ -3317,7 +3322,7 @@
   {
     "nombre": "Dolce & Gabbana Q 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/g/1g90310000_1.jpg",
-    "precio_venta": 1650
+    "precio_venta": 1560
   },
   {
     "nombre": "Dolce & Gabbana Q Intense 100Ml Edp Spray",
@@ -3432,7 +3437,7 @@
   {
     "nombre": "Eau Fraiche 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/5/0/500010_1_3.jpg",
-    "precio_venta": 1510
+    "precio_venta": 1480
   },
   {
     "nombre": "Eau Sauvage 100 Ml Edt Spray",
@@ -3517,7 +3522,7 @@
   {
     "nombre": "Eternity 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/10140_1_3.jpg",
-    "precio_venta": 1110
+    "precio_venta": 1080
   },
   {
     "nombre": "Eternity 100 Ml Edt Spray",
@@ -3532,7 +3537,7 @@
   {
     "nombre": "Eternity Air 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/2/2/229040_1_3.jpg",
-    "precio_venta": 1090
+    "precio_venta": 1030
   },
   {
     "nombre": "Eternity Air For Men 100 Ml Edt Spray",
@@ -3960,11 +3965,6 @@
     "precio_venta": 1880
   },
   {
-    "nombre": "Givenchy L'Interdit 80Ml Edt Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/0/p069312_1.jpg",
-    "precio_venta": 2240
-  },
-  {
     "nombre": "Givenchy Very Irresistible 80Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/0/p000348_1.jpg",
     "precio_venta": 1650
@@ -4027,7 +4027,7 @@
   {
     "nombre": "Good Girl 80 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65104398_1_4.jpg",
-    "precio_venta": 2380
+    "precio_venta": 2440
   },
   {
     "nombre": "Good Girl Blush 150Ml Edp Spray",
@@ -4162,7 +4162,7 @@
   {
     "nombre": "Guess 75 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/7/0/70287776_1_3.jpg",
-    "precio_venta": 670
+    "precio_venta": 640
   },
   {
     "nombre": "Guess 75 Ml Edt Spray",
@@ -4527,7 +4527,7 @@
   {
     "nombre": "Halloween 125 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/4/6/46251_1_3.jpg",
-    "precio_venta": 1150
+    "precio_venta": 1080
   },
   {
     "nombre": "Halloween Blossom 100Ml Edt Spray",
@@ -4537,7 +4537,7 @@
   {
     "nombre": "Halloween Blue Drop 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/4/7/47201_1_3.jpg",
-    "precio_venta": 950
+    "precio_venta": 990
   },
   {
     "nombre": "Halloween Magic 100ml Edt Spray",
@@ -4547,7 +4547,7 @@
   {
     "nombre": "Halloween Man Hero 125 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/1/014704000_1.jpg",
-    "precio_venta": 1000
+    "precio_venta": 960
   },
   {
     "nombre": "Halloween Man Mystery 125Ml Edp Spray",
@@ -4642,7 +4642,7 @@
   {
     "nombre": "Hugo Green 125ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/2/82380_2.jpg",
-    "precio_venta": 950
+    "precio_venta": 1030
   },
   {
     "nombre": "Hugo Green 200Ml Edt Spray",
@@ -4672,12 +4672,12 @@
   {
     "nombre": "Hypnotic 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/f/0/f006344009_1_3.jpg",
-    "precio_venta": 2620
+    "precio_venta": 2520
   },
   {
     "nombre": "I Love Love 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/a/6a32_1_3.jpg",
-    "precio_venta": 1020
+    "precio_venta": 960
   },
   {
     "nombre": "Idole 100Ml Edp Spray",
@@ -4717,12 +4717,12 @@
   {
     "nombre": "Initio Paragon 90Ml Extracto De Perfume Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/9/096010li0003sp_1.jpg",
-    "precio_venta": 5620
+    "precio_venta": 6080
   },
   {
     "nombre": "Initio Rehab 90Ml Extracto De Perfume Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/9/096010li0001sp_1.jpg",
-    "precio_venta": 5620
+    "precio_venta": 6080
   },
   {
     "nombre": "Initio Side Effect 90Ml Edp Spray",
@@ -5352,7 +5352,7 @@
   {
     "nombre": "Lacoste Touch Of Pink 90 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/8/0/80919132_1_3.jpg",
-    "precio_venta": 950
+    "precio_venta": 900
   },
   {
     "nombre": "Lady Million 80 Ml Edp Spray",
@@ -5497,7 +5497,7 @@
   {
     "nombre": "Lattafa Asad 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/7/3/73541_1.jpg",
-    "precio_venta": 710
+    "precio_venta": 740
   },
   {
     "nombre": "LATTAFA ASAD 200ML BODY SPRAY",
@@ -5637,7 +5637,7 @@
   {
     "nombre": "Lattafa Pride Art Of Universe 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/5/9/59220_1.jpg",
-    "precio_venta": 1170
+    "precio_venta": 1030
   },
   {
     "nombre": "Lattafa Pride Artisan Ethnique 100Ml Edp Spray",
@@ -5662,7 +5662,7 @@
   {
     "nombre": "Lattafa Ramz 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/6/06672_1.jpg",
-    "precio_venta": 510
+    "precio_venta": 550
   },
   {
     "nombre": "Lattafa Ramz Gold 100Ml Edp Spray",
@@ -5932,7 +5932,7 @@
   {
     "nombre": "Meow Katy Perry 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/4/141580_1_3.jpg",
-    "precio_venta": 740
+    "precio_venta": 780
   },
   {
     "nombre": "Michael Kors Gorgeous! 100ML EDP Spray",
@@ -6092,7 +6092,7 @@
   {
     "nombre": "Montblanc Explorer 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/m/b/mb017a01_1.jpg",
-    "precio_venta": 1240
+    "precio_venta": 1210
   },
   {
     "nombre": "Montblanc Explorer 200Ml Edp Spray",
@@ -6127,7 +6127,7 @@
   {
     "nombre": "Montblanc Legend 200ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/m/b/mb008a14_1.jpg",
-    "precio_venta": 1390
+    "precio_venta": 1350
   },
   {
     "nombre": "Montblanc Legend Blue 100Ml Edp Spray",
@@ -6142,12 +6142,12 @@
   {
     "nombre": "Montblanc Legend Spirit 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/m/b/mb-0000027_1_3.jpg",
-    "precio_venta": 1130
+    "precio_venta": 1120
   },
   {
     "nombre": "Montblanc Legend Spirit 200ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/m/b/mb013a07_2.jpg",
-    "precio_venta": 1550
+    "precio_venta": 1480
   },
   {
     "nombre": "Montblanc Patchouli Ink 125Ml Edp Spray",
@@ -6182,17 +6182,17 @@
   {
     "nombre": "Moschino Toy 2 100ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/v/6v32_1.jpg",
-    "precio_venta": 1220
+    "precio_venta": 1160
   },
   {
     "nombre": "Moschino Toy 2 Bubblegum 100Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/x/6x32_2.jpg",
-    "precio_venta": 1200
+    "precio_venta": 1160
   },
   {
     "nombre": "Moschino Toy 2 Pearl 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/2/1260006y32_1.jpg",
-    "precio_venta": 1350
+    "precio_venta": 1310
   },
   {
     "nombre": "Moschino Toy Boy 100ml Edp Spray",
@@ -6252,7 +6252,7 @@
   {
     "nombre": "My Way Intense 90Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/2/4/2401263_1.jpg",
-    "precio_venta": 2470
+    "precio_venta": 2250
   },
   {
     "nombre": "My Way Parfum 90Ml Edp Spray",
@@ -6462,7 +6462,7 @@
   {
     "nombre": "Olympea Absolu 80Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65215203_1.jpg",
-    "precio_venta": 2130
+    "precio_venta": 2000
   },
   {
     "nombre": "Olympea Blossom 80ml Edp Spray",
@@ -6472,7 +6472,7 @@
   {
     "nombre": "Olympea Flora 80Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65188725_1.jpg",
-    "precio_venta": 2000
+    "precio_venta": 1880
   },
   {
     "nombre": "Olympea Parfum 80Ml Edp Spray",
@@ -6697,7 +6697,7 @@
   {
     "nombre": "Paco Rabanne Invictus 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65055742_3.jpg",
-    "precio_venta": 1740
+    "precio_venta": 1800
   },
   {
     "nombre": "Paco Rabanne Invictus Victory 100 Ml Edp Spray",
@@ -6995,11 +6995,6 @@
     "precio_venta": 4720
   },
   {
-    "nombre": "Parfums De Marly Oajan 125Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/n/p/npm1200pv_1.jpg",
-    "precio_venta": 5360
-  },
-  {
     "nombre": "Parfums De Marly Oriana 75Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/m/pm0012pv_1.jpg",
     "precio_venta": 5430
@@ -7010,11 +7005,6 @@
     "precio_venta": 5560
   },
   {
-    "nombre": "Parfums De Marly Pegasus 125Ml Edp Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/m/pm0600pv_1.jpg",
-    "precio_venta": 5290
-  },
-  {
     "nombre": "Parfums De Marly Pegasus 75Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/02285_1.jpg",
     "precio_venta": 4470
@@ -7022,12 +7012,12 @@
   {
     "nombre": "Parfums De Marly Pegasus Exclusif 125 Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/m/pm2300pv_1.jpg",
-    "precio_venta": 7000
+    "precio_venta": 6650
   },
   {
     "nombre": "Parfums De Marly Pegasus Exclusif Parfum 125 Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/n/p/npm2300pv_1.jpg",
-    "precio_venta": 6660
+    "precio_venta": 6330
   },
   {
     "nombre": "Parfums De Marly Percival 125Ml Edp Spray",
@@ -7425,11 +7415,6 @@
     "precio_venta": 3580
   },
   {
-    "nombre": "Prada Paradoxe 90Ml Edp Refillable Spray",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/l/d/ld792601_1.jpg",
-    "precio_venta": 2880
-  },
-  {
     "nombre": "Prada Paradoxe Virtual Flower 90Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/l/e/le469700_1.jpg",
     "precio_venta": 2750
@@ -7522,7 +7507,7 @@
   {
     "nombre": "Rasasi Hawas 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/f/s/fs331002_1.jpg",
-    "precio_venta": 980
+    "precio_venta": 950
   },
   {
     "nombre": "Rasasi Hawas Atlantis 100Ml Edp Spray",
@@ -7577,7 +7562,7 @@
   {
     "nombre": "Roja Elysium Pour Homme 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/r/d/rd2843_1.jpg",
-    "precio_venta": 5400
+    "precio_venta": 5490
   },
   {
     "nombre": "Roja Isola Blu Parfum 50Ml Edp Spray",
@@ -7607,7 +7592,7 @@
   {
     "nombre": "Sabrina Carpenter Caramel Dream 236Ml Body Mist Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/7/67572_1.jpg",
-    "precio_venta": 410
+    "precio_venta": 480
   },
   {
     "nombre": "Sabrina Carpenter Caramel Dream 75Ml Edp Spray",
@@ -7617,7 +7602,7 @@
   {
     "nombre": "Sabrina Carpenter Cherry Baby 236Ml Body Mist Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/7/67748_1.jpg",
-    "precio_venta": 410
+    "precio_venta": 480
   },
   {
     "nombre": "Sabrina Carpenter Cherry Baby 75Ml Edp Spray",
@@ -7627,7 +7612,7 @@
   {
     "nombre": "Sabrina Carpenter Me Espresso 236Ml Body Mist Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/7/67887_1.jpg",
-    "precio_venta": 330
+    "precio_venta": 390
   },
   {
     "nombre": "Sabrina Carpenter Me Espresso 75Ml Edp Spray",
@@ -7657,7 +7642,7 @@
   {
     "nombre": "Salvatore Ferragamo Incanto Charms 100ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/4/9/49252_2.jpg",
-    "precio_venta": 860
+    "precio_venta": 670
   },
   {
     "nombre": "Salvatore Ferragamo Incanto Shine 100 Ml Edt Spray",
@@ -7727,7 +7712,7 @@
   {
     "nombre": "Scandal Le Parfum 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65182477_1.jpg",
-    "precio_venta": 2080
+    "precio_venta": 2030
   },
   {
     "nombre": "Scandal Le Parfum Intense 80 Ml Edp Spray",
@@ -7876,12 +7861,12 @@
   },
   {
     "nombre": "Set Agatha Look 2Pzs",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65201435_1.jpg",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65240271_1.jpg",
     "precio_venta": 590
   },
   {
     "nombre": "Set Agatha Look 2Pzs",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65240271_1.jpg",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65201435_1.jpg",
     "precio_venta": 590
   },
   {
@@ -8616,13 +8601,13 @@
   },
   {
     "nombre": "Set Lady Million 2Pzs",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65218578_1.jpg",
-    "precio_venta": 2040
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65240035_1.jpg",
+    "precio_venta": 2220
   },
   {
     "nombre": "Set Lady Million 2Pzs",
-    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65240035_1.jpg",
-    "precio_venta": 2220
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65218578_1.jpg",
+    "precio_venta": 2040
   },
   {
     "nombre": "Set Lattafa Fakhar 100ml + Desodorante 200ml",
@@ -9347,7 +9332,7 @@
   {
     "nombre": "The One 150Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/g/1g93750000_1_1.jpg",
-    "precio_venta": 1890
+    "precio_venta": 1830
   },
   {
     "nombre": "The One 150Ml Edt Spray",
@@ -9398,6 +9383,16 @@
     "nombre": "Tom Ford Grey Vetiver 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/0/00779_1.jpg",
     "precio_venta": 3230
+  },
+  {
+    "nombre": "Tom Ford Ombre Leather 100 Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/7/07514_1.jpg",
+    "precio_venta": 3900
+  },
+  {
+    "nombre": "Tom Ford Velvet Orchid 100Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/0/2/02395_1.jpg",
+    "precio_venta": 3530
   },
   {
     "nombre": "Tommy 100Ml Edt Spray Sin Celofan",
@@ -9545,6 +9540,11 @@
     "precio_venta": 320
   },
   {
+    "nombre": "Tubbees Lychee Lush 50Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/9/p9965_1.jpg",
+    "precio_venta": 320
+  },
+  {
     "nombre": "TUBBEES MATCHA MADE IN HEAVEN 50ML EDP SPRAY",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/5/p5694_1_1.jpg",
     "precio_venta": 320
@@ -9562,7 +9562,7 @@
   {
     "nombre": "Tubbees Pistachio Kunafa 50Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/9/p9964_1.jpg",
-    "precio_venta": 360
+    "precio_venta": 320
   },
   {
     "nombre": "Tubbees Strawberry Cheesecake 50Ml Edp Spray",
@@ -9582,6 +9582,16 @@
   {
     "nombre": "Tubbees Tira Miss You 50Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/5/p5697_1.jpg",
+    "precio_venta": 320
+  },
+  {
+    "nombre": "Tubbees Tres Leches 50Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/5/p5698_1.jpg",
+    "precio_venta": 320
+  },
+  {
+    "nombre": "Tubbees Tropical Island 50Ml Edp Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/p/9/p9966_1.jpg",
     "precio_venta": 320
   },
   {
@@ -9690,6 +9700,11 @@
     "precio_venta": 1480
   },
   {
+    "nombre": "Versace Dylan Blue 200Ml Edt Spray",
+    "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/3/1300721012_1.jpg",
+    "precio_venta": 1740
+  },
+  {
     "nombre": "Versace Dylan Blue Pour Femme 100 Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/7/0/702032_2_3.jpg",
     "precio_venta": 1660
@@ -9697,7 +9712,7 @@
   {
     "nombre": "Versace Dylan Purple 100Ml Edp Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/3/1300702232_1.jpg",
-    "precio_venta": 1770
+    "precio_venta": 1680
   },
   {
     "nombre": "Versace Dylan Turquoise 100ml Edt Spray",
@@ -9712,7 +9727,7 @@
   {
     "nombre": "Versace Eros 100 Ml Edt Spray",
     "img": "https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/7/4/740010_1_4.jpg",
-    "precio_venta": 1670
+    "precio_venta": 1560
   },
   {
     "nombre": "Versace Eros 100ML EDP Spray",
