@@ -124,6 +124,22 @@ async function main() {
   // Orden alfabético
   productos.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 
+  // Seguro: si el resultado es mucho más chico que el catálogo actual,
+  // probablemente Amora bloqueó las peticiones a medias. No sobrescribimos.
+  let anterior = [];
+  try {
+    anterior = JSON.parse(fs.readFileSync('products.json', 'utf-8'));
+  } catch (e) {
+    anterior = [];
+  }
+
+  const minimoAceptable = Math.floor(anterior.length * 0.7); // tolera hasta 30% de baja normal
+  if (anterior.length > 0 && productos.length < minimoAceptable) {
+    console.log(`\n⚠️ El resultado (${productos.length}) es mucho menor al catálogo actual (${anterior.length}).`);
+    console.log('Probablemente Amora bloqueó las peticiones a medias. NO se sobrescribe products.json.');
+    process.exit(1); // marca la corrida como fallida para que se note en Actions
+  }
+
   fs.writeFileSync('products.json', JSON.stringify(productos, null, 2));
   console.log(`\n✅ Listo: ${productos.length} productos guardados en products.json`);
 }
