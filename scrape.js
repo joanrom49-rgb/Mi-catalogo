@@ -57,6 +57,7 @@ function extraerDePagina(html) {
 
 // Margen escalonado: más % en fragancias baratas, menos en las caras
 // + $180 de envío si el producto no alcanza el mínimo de envío gratis de Amora ($1,300)
+// + $150 parejo sobre todo al final
 function calcularPrecioVenta(precioAmora){
   if (precioAmora == null) return null;
   let margen;
@@ -70,7 +71,8 @@ function calcularPrecioVenta(precioAmora){
   if (precioAmora < 1300) {
     conMargen += 180;
   }
-  return Math.ceil(conMargen / 10) * 10; // redondea hacia arriba al $10
+  const redondeado = Math.ceil(conMargen / 10) * 10; // redondea hacia arriba al $10
+  return redondeado + 150; // subida pareja a todos
 }
 
 async function main() {
@@ -137,7 +139,7 @@ async function main() {
   if (anterior.length > 0 && productos.length < minimoAceptable) {
     console.log(`\n⚠️ El resultado (${productos.length}) es mucho menor al catálogo actual (${anterior.length}).`);
     console.log('Probablemente Amora bloqueó las peticiones a medias. NO se sobrescribe products.json.');
-    process.exit(1); // marca la corrida como fallida para que se note en Actions
+    process.exit(1);
   }
 
   fs.writeFileSync('products.json', JSON.stringify(productos, null, 2));
