@@ -168,11 +168,14 @@ let currentList = [];
 function limpiarUrl(url) {
   if (!url) return "";
   let limpia = url.trim();
-  if (limpia.startsWith("//")) return "https:" + limpia;
+  if (limpia.startsWith("//")) limpia = "https:" + limpia;
   if (!limpia.startsWith("http")) {
-    return "https://amoramarket.com.mx/" + limpia.replace(/^\/+/, "");
+    limpia = "https://amoramarket.com.mx/" + limpia.replace(/^\/+/, "");
   }
-  return limpia;
+
+  // Quita el prefijo https:// o http:// para pasarlo a través del CDN Statically
+  const urlSinProtocolo = limpia.replace(/^https?:\/\//i, "");
+  return "https://cdn.statically.io/img/" + urlSinProtocolo;
 }
 
 function money(n){
