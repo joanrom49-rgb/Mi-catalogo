@@ -1,6 +1,7 @@
 import * as cheerio from 'cheerio';
 import fs from 'fs';
 
+// URL exacta y vigente de la categoría en Amora
 const BASE = 'https://www.amoramarket.com.mx/fragancias1/';
 const MAX_PAGES = 100;
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -8,7 +9,8 @@ const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 async function fetchPagina(p, intentos = 3) {
   for (let i = 0; i < intentos; i++) {
     try {
-      const res = await fetch(`${BASE}?p=${p}`, {
+      const url = p === 1 ? BASE : `${BASE}?p=${p}`;
+      const res = await fetch(url, {
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
           'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -41,7 +43,7 @@ function extraerDePagina(html) {
   const items = [];
 
   $('.product-item, li.item.product').each((_, el) => {
-    const $el = $(el);
+    const $el =$(el);
     const linkEl = $el.find('a.product-item-link, a.product-item-photo').first();
     const nameEl = $el.find('.product-item-link, .product-item-name').first();
     const imgEl = $el.find('.product-image-photo, img').first();
@@ -50,7 +52,7 @@ function extraerDePagina(html) {
     if (nombre.endsWith('.')) nombre = nombre.slice(0, -1).trim();
     const url = linkEl.attr('href') || '';
 
-    // Detección exhaustiva de imagen (Magento lazy-load attributes)
+    // Extrae la URL de imagen válida de Magento
     let img = (
       imgEl.attr('data-src') ||
       imgEl.attr('data-original') ||
@@ -59,7 +61,6 @@ function extraerDePagina(html) {
       ''
     ).trim();
 
-    // Si viene en srcset, toma la primera URL
     if ((!img || img.startsWith('data:')) && imgEl.attr('srcset')) {
       const srcset = imgEl.attr('srcset').split(',')[0].trim().split(' ')[0];
       if (srcset) img = srcset;
@@ -71,18 +72,16 @@ function extraerDePagina(html) {
     }
     if (/^tester\b/i.test(nombre)) return;
 
-    // Extracción de precio con prioridad al precio final o especial
+    // Extracción de precio con prioridad al precio final
     let precio = null;
     const finalPriceEl = $el.find('[data-price-type="finalPrice"] .price, .special-price .price, .price-wrapper .price').first();
 
     if (finalPriceEl.length) {
       const txt = finalPriceEl.text();
-      const limpio = txt.replace(/,/g, '').replace(/[^0-9.]/g, '');
-      const parsed = parseFloat(limpio);
-      if (!isNaN(parsed) && parsed > 0) precio = parsed;
+      const num = parseFloat(txt.replace(/,/g, '').replace(/[^0-9.]/g, ''));
+      if (!isNaN(num) && num > 0) precio = num;
     }
 
-    // Fallback si no encontró el selector principal
     if (precio === null) {
       $el.find('.price').each((_, pEl) => {
         const txt = $(pEl).text();
@@ -142,8 +141,7 @@ async function main() {
     for (const it of items) {
       if (seen.has(it.url)) continue;
       seen.add(it.url);
-      
-      // Permitimos guardar el producto aunque la imagen tarde, o verificamos que exista
+
       if (it.img) {
         productos.push({
           nombre: it.nombre,
@@ -167,7 +165,6 @@ async function main() {
       if (nuevos2 === 0) break;
     }
 
-    // Pausa prudente para no saturar ni ser bloqueado
     await esperar(2500);
   }
 
@@ -183,7 +180,7 @@ async function main() {
   const minimoAceptable = Math.floor(anterior.length * 0.7);
   if (anterior.length > 0 && productos.length < minimoAceptable) {
     console.log(`\n⚠️ Alerta: El scraping obtuvo ${productos.length} productos, pero el catálogo previo tenía ${anterior.length}.`);
-    console.log('Posible bloqueo por parte de Amora. Abortando para no borrar el catálogo.');
+    console.log('Posible bloqueo por parte de Amora. Abortando para no sobreescribir.');
     process.exit(1);
   }
 
