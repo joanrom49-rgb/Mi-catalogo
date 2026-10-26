@@ -196,6 +196,36 @@ function renderPage(){
 
   const slice = currentList.slice(0, shown);
   grid.innerHTML = slice.map(p => {
+    // Si la imagen ya tiene http/https la usa, si no, le añade la base de Amora
+    let src = p.img || "";
+    if (src && !src.startsWith("http")) {
+      src = "https://amoramarket.com.mx/" + src.replace(/^\/+/, "");
+    }
+
+    return `
+      <div class="card">
+        <div class="imgwrap">
+          ${src
+            ? `<img src="${src}" alt="${p.nombre}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+               <div class="fallback" style="display:none;">${p.nombre}</div>`
+            : `<div class="fallback">${p.nombre}</div>`
+          }
+        </div>
+        <div class="body">
+          <div class="name">${p.nombre}</div>
+          ${p.precio_venta ? `<div class="price">${money(p.precio_venta)}</div>` : ""}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  loadMore.style.display = shown < currentList.length ? "block" : "none";
+}
+  
+  empty.style.display = "none";
+
+  const slice = currentList.slice(0, shown);
+  grid.innerHTML = slice.map(p => {
     const src = getImageUrl(p.img);
     return `
       <div class="card">
