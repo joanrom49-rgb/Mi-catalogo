@@ -9,14 +9,29 @@ async function fetchPagina(p, intentos = 3) {
   for (let i = 0; i < intentos; i++) {
     try {
       const res = await fetch(`${BASE}?p=${p}`, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; CatalogBot/1.0; +https://github.com)' }
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+          'Accept-Language': 'es-MX,es;q=0.9,en;q=0.8',
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache',
+          'Sec-Ch-Ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+          'Sec-Ch-Ua-Mobile': '?0',
+          'Sec-Ch-Ua-Platform': '"Windows"',
+          'Sec-Fetch-Dest': 'document',
+          'Sec-Fetch-Mode': 'navigate',
+          'Sec-Fetch-Site': 'none',
+          'Sec-Fetch-User': '?1',
+          'Upgrade-Insecure-Requests': '1'
+        }
       });
+
       if (res.ok) return await res.text();
-      console.log(`Página ${p}: respuesta ${res.status}, reintentando...`);
+      console.log(`Página ${p}: código HTTP ${res.status}, reintentando en breve...`);
     } catch (e) {
-      console.log(`Página ${p}: error de red, reintentando...`);
+      console.log(`Página ${p}: error de conexión (${e.message}), reintentando...`);
     }
-    await esperar(4000 + i * 3000);
+    await esperar(5000 + i * 4000);
   }
   return null;
 }
@@ -29,25 +44,54 @@ function extraerDePagina(html) {
     const $el = $(el);
     const linkEl = $el.find('a.product-item-link, a.product-item-photo').first();
     const nameEl = $el.find('.product-item-link, .product-item-name').first();
-    const imgEl = $el.find('img').first();
+    const imgEl = $el.find('.product-image-photo, img').first();
 
     let nombre = (nameEl.text() || linkEl.text() || '').trim();
     if (nombre.endsWith('.')) nombre = nombre.slice(0, -1).trim();
     const url = linkEl.attr('href') || '';
-    let img = imgEl.attr('src') || imgEl.attr('data-src') || imgEl.attr('data-original') || '';
+
+    // Detección exhaustiva de imagen (Magento lazy-load attributes)
+    let img = (
+      imgEl.attr('data-src') ||
+      imgEl.attr('data-original') ||
+      imgEl.attr('data-amsrc') ||
+      imgEl.attr('src') ||
+      ''
+    ).trim();
+
+    // Si viene en srcset, toma la primera URL
+    if ((!img || img.startsWith('data:')) && imgEl.attr('srcset')) {
+      const srcset = imgEl.attr('srcset').split(',')[0].trim().split(' ')[0];
+      if (srcset) img = srcset;
+    }
 
     if (!nombre || !url) return;
-    if (img.startsWith('data:') || img.includes('loader')) img = '';
-    if (/^tester\b/i.test(nombre)) return; // excluye testers (traen marca de agua de Amora en la foto)
+    if (img.startsWith('data:') || img.includes('loader') || img.includes('placeholder')) {
+      img = '';
+    }
+    if (/^tester\b/i.test(nombre)) return;
 
+    // Extracción de precio con prioridad al precio final o especial
     let precio = null;
-    $el.find('.price').each((_, priceEl) => {
-      const txt = $(priceEl).text();
-      const num = parseFloat(txt.replace(/[^0-9.]/g, ''));
-      if (!isNaN(num) && num > 0 && (precio === null || num < precio)) {
-        precio = num;
-      }
-    });
+    const finalPriceEl = $el.find('[data-price-type="finalPrice"] .price, .special-price .price, .price-wrapper .price').first();
+
+    if (finalPriceEl.length) {
+      const txt = finalPriceEl.text();
+      const limpio = txt.replace(/,/g, '').replace(/[^0-9.]/g, '');
+      const parsed = parseFloat(limpio);
+      if (!isNaN(parsed) && parsed > 0) precio = parsed;
+    }
+
+    // Fallback si no encontró el selector principal
+    if (precio === null) {
+      $el.find('.price').each((_, pEl) => {
+        const txt = $(pEl).text();
+        const num = parseFloat(txt.replace(/,/g, '').replace(/[^0-9.]/g, ''));
+        if (!isNaN(num) && num > 0 && (precio === null || num < precio)) {
+          precio = num;
+        }
+      });
+    }
 
     items.push({ nombre, url, img, precio });
   });
@@ -55,10 +99,7 @@ function extraerDePagina(html) {
   return items;
 }
 
-// Margen escalonado: más % en fragancias baratas, menos en las caras
-// + $180 de envío si el producto no alcanza el mínimo de envío gratis de Amora ($1,300)
-// + $150 parejo sobre todo al final
-function calcularPrecioVenta(precioAmora){
+function calcularPrecioVenta(precioAmora) {
   if (precioAmora == null) return null;
   let margen;
   if (precioAmora < 500) margen = 0.35;
@@ -71,8 +112,8 @@ function calcularPrecioVenta(precioAmora){
   if (precioAmora < 1300) {
     conMargen += 180;
   }
-  const redondeado = Math.ceil(conMargen / 10) * 10; // redondea hacia arriba al $10
-  return redondeado + 150; // subida pareja a todos
+  const redondeado = Math.ceil(conMargen / 10) * 10;
+  return redondeado + 150;
 }
 
 async function main() {
@@ -85,49 +126,53 @@ async function main() {
 
     if (html === null) {
       fallosSeguidos++;
-      console.log(`Página ${p}: no se pudo cargar tras varios intentos.`);
-      if (fallosSeguidos >= 4) break;
-      await esperar(2000);
+      console.log(`Página ${p}: falló la descarga.`);
+      if (fallosSeguidos >= 4) {
+        console.log('Demasiados fallos consecutivos, finalizando recorrido de páginas.');
+        break;
+      }
+      await esperar(3000);
       continue;
     }
     fallosSeguidos = 0;
 
     const items = extraerDePagina(html);
     let nuevos = 0;
+
     for (const it of items) {
       if (seen.has(it.url)) continue;
       seen.add(it.url);
+      
+      // Permitimos guardar el producto aunque la imagen tarde, o verificamos que exista
       if (it.img) {
         productos.push({
           nombre: it.nombre,
           img: it.img,
           precio_venta: calcularPrecioVenta(it.precio)
         });
+        nuevos++;
       }
-      nuevos++;
     }
 
-    console.log(`Página ${p}: +${nuevos} (total ${productos.length})`);
+    console.log(`Página ${p}: +${nuevos} nuevos (acumulados: ${productos.length})`);
 
     if (nuevos === 0 && p > 1) {
-      console.log('Sin productos nuevos, verificando una vez más antes de parar...');
-      await esperar(3000);
+      console.log('No hubo productos nuevos en esta página. Verificando siguiente...');
+      await esperar(4000);
       const html2 = await fetchPagina(p + 1);
-      if (html2 === null) break;
+      if (!html2) break;
       const items2 = extraerDePagina(html2);
       const nuevos2 = items2.filter((it) => !seen.has(it.url)).length;
-      console.log(`Página ${p + 1}: +${nuevos2} (verificación)`);
+      console.log(`Página ${p + 1}: +${nuevos2} en verificación`);
       if (nuevos2 === 0) break;
     }
 
-    await esperar(1500);
+    // Pausa prudente para no saturar ni ser bloqueado
+    await esperar(2500);
   }
 
-  // Orden alfabético
   productos.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 
-  // Seguro: si el resultado es mucho más chico que el catálogo actual,
-  // probablemente Amora bloqueó las peticiones a medias. No sobrescribimos.
   let anterior = [];
   try {
     anterior = JSON.parse(fs.readFileSync('products.json', 'utf-8'));
@@ -135,18 +180,18 @@ async function main() {
     anterior = [];
   }
 
-  const minimoAceptable = Math.floor(anterior.length * 0.7); // tolera hasta 30% de baja normal
+  const minimoAceptable = Math.floor(anterior.length * 0.7);
   if (anterior.length > 0 && productos.length < minimoAceptable) {
-    console.log(`\n⚠️ El resultado (${productos.length}) es mucho menor al catálogo actual (${anterior.length}).`);
-    console.log('Probablemente Amora bloqueó las peticiones a medias. NO se sobrescribe products.json.');
+    console.log(`\n⚠️ Alerta: El scraping obtuvo ${productos.length} productos, pero el catálogo previo tenía ${anterior.length}.`);
+    console.log('Posible bloqueo por parte de Amora. Abortando para no borrar el catálogo.');
     process.exit(1);
   }
 
   fs.writeFileSync('products.json', JSON.stringify(productos, null, 2));
-  console.log(`\n✅ Listo: ${productos.length} productos guardados en products.json`);
+  console.log(`\n✅ Éxito: ${productos.length} productos exportados a products.json`);
 }
 
 main().catch((err) => {
-  console.error('Error durante el scraping:', err);
+  console.error('Error general durante la ejecución:', err);
   process.exit(1);
 });
