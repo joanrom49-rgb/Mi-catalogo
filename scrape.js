@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio';
 import fs from 'fs';
 
-const BASE = 'https://amoramarket.com.mx/fragancias.html';
+const BASE = 'https://www.amoramarket.com.mx/fragancias1/';
 const MAX_PAGES = 100;
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 
